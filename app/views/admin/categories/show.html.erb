@@ -1,0 +1,18 @@
+<% content_for :title, "Detail categories"  %>
+<% content_for :description, "Show detail of category" %>
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <label for="name" class="form-label">Name</label>
+      <%= text_field_tag :name, @category.name, class: "form-control", disabled: true %>
+    </div>
+
+    <% if @category.parent.present? %>
+      <div class="form-group">
+        <label for="parent" class="form-label">Parent</label>
+        <%= text_field_tag :parent_id, @category.parent.name, disabled: true %>
+      </div>
+    <% end %>
+    <%= link_to "Edit", edit_admin_category_path(@category), class: "btn btn-primary" %>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<% content_for :title, "Categories List"  %>
+<% content_for :description, "Show all categories" %>
+
+<div class="row mb-3">
+  <div class="col-12">
+    <%= link_to new_admin_category_path, class: "btn btn-success" do %>
+      Create Category
+    <% end %>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>parent</th>
+      </tr>
+      </thead>
+      <tbody>
+        <%= render partial: :category, collection: @categories %>
+      </tbody>
+    </table>
+  </div>
+</div>

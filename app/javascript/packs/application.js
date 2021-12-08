@@ -11,3 +11,9 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import 'bootstrap/dist/css/bootstrap.css';
+import '../stylesheets/application';
+require('admin-lte');
+import "admin-lte/dist/css/adminlte.css";
+import "@fortawesome/fontawesome-free/css/all"
