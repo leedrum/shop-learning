@@ -3,5 +3,6 @@ class Category < ApplicationRecord
 
   validates :name, presence: true
 
-  ATTRIBUTES_CREATE = %w(name)
+  ATTRIBUTES_CREATE = %w(name parent_id)
+  ATTRIBUTES_UPDATE = %w(name parent_id)
 end

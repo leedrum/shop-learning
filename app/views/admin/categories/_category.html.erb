@@ -1,0 +1,5 @@
+<tr>
+  <td><%= category.id %></td>
+  <td><%= category.name %></td>
+  <td><%= link_to category.parent.name, admin_category_path(category.parent_id) if category.parent_id.present? %></td>
+</tr>
